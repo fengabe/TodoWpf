@@ -3,6 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoWpf", "TodoWpf\TodoWpf.csproj", "{21548E8C-B765-4FA0-A062-822DD6722454}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D18E2AF6-6ABF-445B-A92C-657162847C73}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoWpf.Tests", "TodoWpf.Tests\TodoWpf.Tests.csproj", "{E8536EA8-4C9B-4ED7-B1CA-97E0E794C393}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +22,10 @@ Global
 		{21548E8C-B765-4FA0-A062-822DD6722454}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21548E8C-B765-4FA0-A062-822DD6722454}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21548E8C-B765-4FA0-A062-822DD6722454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8536EA8-4C9B-4ED7-B1CA-97E0E794C393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8536EA8-4C9B-4ED7-B1CA-97E0E794C393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8536EA8-4C9B-4ED7-B1CA-97E0E794C393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8536EA8-4C9B-4ED7-B1CA-97E0E794C393}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
