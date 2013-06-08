@@ -23,7 +23,7 @@ public bool Complete
 Microsoft's [Unity library](http://msdn.microsoft.com/en-us/library/dd203101.aspx) works beautifully with the MVVM Light framework. The IoC Container for this project is in the `Bootstrapper.cs` file. The bootstrapper class is reference in the ViewModelLocator when a new view is constructed. Dependencies are injected into the ViewModels that require them.
 
 ## The GUI
-Default WPF windows are boring. [Elysium](http://elysium.codeplex.com/) makes things better. Setting up Elysium is a bit tricky. `The App.xaml.cs` class has the following handler to initialize the theme:
+Default WPF windows are boring. [Elysium](http://elysium.codeplex.com/) makes things better. Setting up Elysium is a bit tricky. The `App.xaml.cs` class has the following handler to initialize the theme:
 
 ```csharp
 private void StartupHandler(object sender, StartupEventArgs e)
