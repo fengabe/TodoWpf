@@ -4,19 +4,21 @@
               xmlns:modern="http://schemas.codeplex.com/elysium"
               Title="Todo WPF" Height="350" Width="525">
     <DockPanel DataContext="{Binding Source={StaticResource Locator}, Path=MainWindow}">
-        <ItemsControl ItemsSource="{Binding TodoItems}">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="{Binding Description}" Background="White" Foreground="{Binding ContentColor}"></Label>
-                        <CheckBox Grid.Column="1" IsChecked="{Binding Complete}"></CheckBox>
-                    </Grid>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding TodoItems}" Margin="20">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="24" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Grid.Column="0" IsChecked="{Binding Complete}"></CheckBox>
+                            <Label Grid.Column="1" Content="{Binding Description}" Foreground="{Binding ContentColor}"></Label>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
     </DockPanel>
 </modern:Window>
