@@ -14,7 +14,16 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <CheckBox Grid.Column="0" IsChecked="{Binding Complete}"></CheckBox>
-                            <Label Grid.Column="1" Content="{Binding Description}" Foreground="{Binding ContentColor}"></Label>
+                            <Label Grid.Column="1" Visibility="{Binding LabelVisibility}" Content="{Binding Description}" Foreground="{Binding ContentColor}">
+                                <Label.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" Command="{Binding LabelClickedCommand}"></MouseBinding>
+                                </Label.InputBindings>
+                            </Label>
+                            <TextBox Grid.Column="1" Visibility="{Binding TextboxVisibility}" Text="{Binding Description}">
+                                <TextBox.InputBindings>
+                                    <KeyBinding Key="Enter" Command="{Binding EnterKeyCommand}"></KeyBinding>
+                                </TextBox.InputBindings>
+                            </TextBox>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
